@@ -1,0 +1,25 @@
+name: whatami # check to see if it's available
+version: '1.0' # this is freakin' awesome
+summary: You'd better have thick skin...or a thick skull! # 79 char long summary
+description: |
+  You came here for help and you found the opposite! Get ready for a liteny of insults; insults that your terminal has always wanted to say but never had the permission. Now, it doesn't care.
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs
+
+apps:
+  liedetector:
+    command: whatami
+    plugs:
+      - home
+parts: 
+  my-part:
+    source: https://github.com/kz6fittycent/whatami
+    source-type: git
+    plugin: python
+    python-version: python3
+    
+    build-packages:
+      - python3
+     
+    stage-packages:
+      - python3
