@@ -7,7 +7,7 @@ grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs
 
 apps:
-  liedetector:
+  whatami:
     command: whatami
     plugs:
       - home
