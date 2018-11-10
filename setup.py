@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name="whatami",
-    version="1.0.0",
+    version="1.1.0",
     description="You'd better have some thick skin...or a thick skull!",
     long_description=open("README.md").read(),
     license="MIT",
