@@ -1,5 +1,5 @@
 name: whatami # check to see if it's available
-version: '1.1' # this is freakin' awesome
+version: git # this is freakin' awesome
 summary: You'd better have thick skin...or a thick skull! # 79 char long summary
 description: |
   You came here for help and you found the opposite! Get ready for a liteny of insults; insults that your terminal has always wanted to say but never had the permission. Now, it doesn't care.
