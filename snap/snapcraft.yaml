@@ -38,15 +38,19 @@ license: MIT
 
 apps:
   whatami:
-    command: whatami
+    command: usr/bin/whatami
+    environment:
+      LC_ALL: C.UTF-8
+      LANG: C.UTF-8
+      PYTHONPATH: $SNAP/usr/lib/python3/dist-packages
     plugs:
       - home
 parts: 
   my-part:
     source: https://github.com/kz6fittycent/whatami
     source-type: git
-    plugin: python
-    python-version: python3
+#    plugin: python
+#    python-version: python3
     
     build-packages:
       - python3
