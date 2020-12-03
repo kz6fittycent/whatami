@@ -1,5 +1,5 @@
 name: whatami
-version: git
+adopt-info: whatami
 summary: You better have thick skin...or a thick skull!
 description: |
   You came here for help and you found the opposite! Get ready for a litany of insults; 
@@ -17,7 +17,13 @@ description: |
   **Install the snap**
 
     sudo snap install whatami
-
+    
+  **Run it
+    
+    With ascii - whatami
+    
+    Without ascii - whatami -p
+    
   **Disclaimer**
 
     You use this snap and software of your own accord, free will and choice. 
@@ -27,7 +33,7 @@ description: |
 
     Just take a step back and laugh at yourself once in a while, everyone else is! :P
     
-    
+      
 grade: stable 
 confinement: strict 
 base: core18
@@ -39,14 +45,17 @@ apps:
     command: whatami
     environment:
       LC_ALL: C.UTF-8
-    plugs:
-      - home
+
 parts: 
-  my-part:
+  whatami:
     source: https://github.com/kz6fittycent/whatami
     source-type: git
     plugin: python
     python-version: python3
+    
+    override-pull: |
+      snapcraftctl pull
+      snapcraftctl set-version "$(git describe --tags | sed 's/^v//' | cut -d "-" -f1)"
     
     build-packages:
       - python3
