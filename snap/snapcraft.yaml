@@ -36,13 +36,13 @@ description: |
       
 grade: stable 
 confinement: strict 
-base: core18
+base: core20
 
 license: MIT
 
 apps:
   whatami:
-    command: whatami
+    command: bin/whatami
     environment:
       LC_ALL: C.UTF-8
 
@@ -51,7 +51,6 @@ parts:
     source: https://github.com/kz6fittycent/whatami
     source-type: git
     plugin: python
-    python-version: python3
 
     override-pull: |
       snapcraftctl pull
