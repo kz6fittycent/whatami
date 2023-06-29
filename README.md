@@ -15,6 +15,10 @@ https://github.com/kz6fittycent/whatami/pulls
 
 `sudo snap install whatami`
 
+## Install on Arch Linux with AUR
+
+`yay -S whatami-git`
+
 ## Run it
     
 * With ascii - `whatami`
